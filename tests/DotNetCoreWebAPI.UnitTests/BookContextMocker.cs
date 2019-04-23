@@ -14,7 +14,7 @@ namespace DotNetCoreWebAPI.UnitTests
                 .Options;
 
             BookContext bookContext = new BookContext(options);
-            BookContext.FillDatabase();
+            bookContext.FillDatabase();
 
             return new BookRepository(bookContext);
         }
