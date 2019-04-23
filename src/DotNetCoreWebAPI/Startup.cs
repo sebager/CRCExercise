@@ -42,6 +42,12 @@ namespace DotNetCoreWebAPI
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApiServer API V1");
+            });
         }
     }
 }
