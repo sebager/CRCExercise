@@ -22,6 +22,11 @@ namespace DotNetCoreWebAPI.Controllers
         {
             var books = await _bookRepository.GetAll();
 
+            if (books == null)
+            {
+                return NotFound("Books couldn't be found.");
+            }
+
             return Ok(books);
         }
 
@@ -30,12 +35,22 @@ namespace DotNetCoreWebAPI.Controllers
         {
             var book = await _bookRepository.Get(id);
 
+            if (book == null)
+            {
+                return NotFound("The book couldn't be found.");
+            }
+
             return Ok(book);
         }
 
         [HttpPost]
         public async Task<IActionResult> Post(Book book)
         {
+            if (book == null)
+            {
+                return BadRequest("Book is null.");
+            }
+
             await _bookRepository.Add(book);
 
             return CreatedAtAction(nameof(Get), new { id = book.Id }, book);

@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{22826C76
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreWebAPI", "src\DotNetCoreWebAPI\DotNetCoreWebAPI.csproj", "{4A7E593C-D08E-4F2B-90B5-85E696EAFE3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebClient", "src\DotNetCoreWebClient\DotNetCoreWebClient.csproj", "{27863661-EC42-433F-81A8-376217DCCDFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreWebClient", "src\DotNetCoreWebClient\DotNetCoreWebClient.csproj", "{27863661-EC42-433F-81A8-376217DCCDFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreWebAPI.UnitTests", "tests\DotNetCoreWebAPI.UnitTests\DotNetCoreWebAPI.UnitTests.csproj", "{BABB6EAA-1092-4C03-B870-D9529CB78F80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreWebAPI.UnitTests", "tests\DotNetCoreWebAPI.UnitTests\DotNetCoreWebAPI.UnitTests.csproj", "{BABB6EAA-1092-4C03-B870-D9529CB78F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
