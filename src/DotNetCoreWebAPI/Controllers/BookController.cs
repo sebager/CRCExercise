@@ -45,6 +45,12 @@ namespace DotNetCoreWebAPI.Controllers
         public async Task<IActionResult> Put(long id, Book book)
         {
             var bookToUpdate = await _bookRepository.Get(id);
+
+            if (bookToUpdate == null)
+            {
+                return NotFound("The book couldn't be found.");
+            }
+
             await _bookRepository.Update(bookToUpdate, book);
 
             return NoContent();
@@ -54,6 +60,12 @@ namespace DotNetCoreWebAPI.Controllers
         public async Task<IActionResult> Delete(long id)
         {
             var bookToDelete = await _bookRepository.Get(id);
+
+            if (bookToDelete == null)
+            {
+                return NotFound("The book couldn't be found.");
+            }
+
             await _bookRepository.Delete(bookToDelete);
 
             return NoContent();
